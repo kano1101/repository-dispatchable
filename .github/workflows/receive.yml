@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: Receive
         run: |
-          PRODUCT_VERSION_ENV=${{ github.event.client_payload.product_version }}
-          echo "PRODUCT_VERSION_ENV = $PRODUCT_VERSION_ENV"
+          ENV=${{ github.event.client_payload.env }}
+          echo "ENV = $ENV"

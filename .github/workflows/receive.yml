@@ -7,7 +7,7 @@ on:
         description: "Product Version (e.g. x.x.x)"
         required: true
   repository_dispatch:
-    types: [on-demand-test]
+    types: [product_fetch]
 
 jobs:
   receive-repository-dispatch:
@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: Receive
         run: |
-          ENV=${{ github.event.client_payload.env }}
+          ENV=${{ github.event.client_payload.product_version }}
           echo "ENV = $ENV"

@@ -1,7 +1,5 @@
 name: Receive
 
-name: Repository dispatch receive
-
 on:
   repository_dispatch:
     types: [on-demand-test]

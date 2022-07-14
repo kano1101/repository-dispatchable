@@ -1,6 +1,11 @@
 name: Receive
 
 on:
+  workflow_dispatch:
+    inputs:
+      product_version:
+        description: "Product Version (e.g. x.x.x)"
+        required: true
   repository_dispatch:
     types: [on-demand-test]
 
